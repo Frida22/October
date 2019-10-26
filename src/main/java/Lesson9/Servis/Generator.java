@@ -21,22 +21,22 @@ public class Generator {
 
     }
 
-    public StringBuilder generateRandomMail() {
+    public String generateRandomMail() {
         StringBuilder builderMail = new StringBuilder();
         mailFirst = RandomStringUtils.randomAlphabetic(5).toLowerCase();
         mailThird = RandomStringUtils.randomAlphabetic(4).toLowerCase();
         mailFive = RandomStringUtils.randomAlphabetic(3).toLowerCase();
         builderMail.append(mailFirst).append(mailSecond).append(mailThird).append(mailFour).append(mailFive);
-        return(builderMail);
+        return builderMail.toString();
 
     }
 
-    public StringBuilder generateRandomString(int size) {
+    public String generateRandomString(int size) {
         StringBuilder builder = new StringBuilder();
         nameFirsLetter = RandomStringUtils.randomAlphabetic(1).toUpperCase();
         name = RandomStringUtils.randomAlphabetic(size).toLowerCase();
         builder.append(nameFirsLetter).append(name);
-        return builder;
+        return builder.toString();
 
     }
     public String generateRandomPassword(){
@@ -44,10 +44,10 @@ public class Generator {
         return password;
 
     }
-    public StringBuilder generateRandomPhone(){
+    public String generateRandomPhone(){
         StringBuilder builder = new StringBuilder();
         int phone = 1000000000 + (int)(Math.random() * 999999999);
         builder.append(phone);
-        return builder;
+        return builder.toString();
     }
 }
