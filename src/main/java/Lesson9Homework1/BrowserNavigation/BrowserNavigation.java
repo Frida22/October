@@ -1,6 +1,4 @@
 package Lesson9Homework1.BrowserNavigation;
-
-import Lesson9Homework1.Servis.Generator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BrowserNavigation {
 
     private WebDriver driver = new ChromeDriver();
-    private Generator generator = new Generator();
     private final int WEB_DRIVER_WAIT_SECOND = 5;
     private final Wait<WebDriver> wait = new WebDriverWait(driver, WEB_DRIVER_WAIT_SECOND);
 
@@ -62,7 +59,7 @@ public class BrowserNavigation {
 
     public BrowserNavigation enterMobilePhone(String generatePhone) {
         driver.findElement(By.cssSelector("#phone_mobile")).click();
-        driver.findElement(By.cssSelector("#phone_mobile")).sendKeys(generator.generateRandomPhone());
+        driver.findElement(By.cssSelector("#phone_mobile")).sendKeys(generatePhone);
         return this;
     }
 

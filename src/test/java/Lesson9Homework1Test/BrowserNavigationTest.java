@@ -2,6 +2,7 @@ package Lesson9Homework1Test;
 
 import Lesson9Homework1.BrowserNavigation.BrowserNavigation;
 import Lesson9Homework1.Servis.Generator;
+import Lesson9Homework1.Servis.WebDriverFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,8 @@ public class BrowserNavigationTest {
 
     @Test
     public void openRegistrationWindow() {
+//        WebDriver driver = WebDriverFactory.CHROME.create();
+
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Njuta\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         BrowserNavigation browserNavigation = new BrowserNavigation();
